@@ -1,0 +1,75 @@
+[
+
+    {
+        "name": "ICBC",
+        "url": "www.icbc.com.cn/icbc/",
+        "logoUrl": "",
+        "sales": 148660000000
+    },
+
+    {
+        "name": "JPMorgan Chase",
+        "url": "www.jpmorganchase.com/",
+        "logoUrl": "",
+        "sales" : 105660000000
+
+    },
+
+    {
+        "name": "GE",
+        "url": "www.ge.com",
+        "logoUrl": "",
+        "sales": 143000000000
+
+    }, {
+        "name": "Royal Dutch Shell",
+        "url": "www.shell.com",
+        "logoUrl": "",
+        "sales": 451000000000
+    },
+
+    {
+
+        "name": "Bank of America",
+        "url": "www.bankofamerica.com",
+        "logoUrl": "",
+        "sales": 1015000000000
+    }, {
+
+        "name": "HSBC",
+        "url": "www.hsbc.com",
+        "logoUrl": "",
+        "sales": 79000000000
+    }, {
+
+        "name": "Samsung",
+        "url": "www.samsung.com/de/home",
+        "logoUrl": "",
+        "sales": 208000000000
+    },
+
+    {
+
+        "name": "Total",
+        "url": "www.total.de",
+        "logoUrl": "",
+        "sales": 227000000000
+    },
+
+    {
+        "name": "Vodafone",
+        "url": "www.vodafone.com",
+        "logoUrl": "",
+        "sales": 65000000000
+    },
+     {
+      "name": "DHL",
+      "url": "www.dhl.de",
+      "logoUrl" : "",
+      "sales": 102000000000
+     }
+
+
+
+
+]

@@ -1,0 +1,148 @@
+<!doctype html>
+<html ng-app="co">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <style>
+    body {
+      font-family: 'Lato';
+    }
+
+    table {
+      width:80% !important;
+      margin-left: 8%;
+
+    }
+
+    </style>
+  </head>
+  <body ng-controller="list">
+
+  <nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">CorpViewer</a>
+    </div>
+
+    
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <h4>Some top Companies according to the forbes list</h4>
+
+    <table class="table table-bordered table-striped">
+
+<label>Filter: <input ng-model="search.name"> </label>
+
+    <thead>
+      <th>Logo</th>
+      <th ng-click="orderS('name')">Name</th>
+      <th>Link</th>
+      <th ng-click="orderS('sales')">Reveneue</th>
+      </thead>
+
+      <tbody ng-repeat="corp in corps | filter: search | orderBy: order: reverse">
+        <td><img ng-src="{{corp.logoUrl}}"></td>
+        <td>{{corp.name}}</td>
+        <td>{{corp.url}}</td>
+        <td>{{corp.sales | currency}}
+      </tbody>
+
+    </table>
+
+
+<script type="">
+var a = angular.module('co', []).controller('list', function ($scope) {
+
+  $scope.order = 'name';
+  $scope.reverse = false;
+
+  $scope.orderS = function (yo) {
+    $scope.order = yo;
+    $scope.reverse = !$scope.reverse;
+  }
+
+  $scope.corps = [
+    {
+        "name": "ICBC",
+        "url": "www.icbc.com.cn/icbc/",
+        "logoUrl": "http://www.icbc.com.cn/SiteCollectionDocuments/ICBC/Resources/ICBC/sy/photo/logo_icbc.jpg",
+        "sales": 148660000000
+    },
+    {
+        "name": "JPMorgan Chase",
+        "url": "www.jpmorganchase.com/",
+        "logoUrl": "http://www.jpmorganchase.com/content/dam/jpmorganchase/en/legacy/corporate/includes/images/jpmc_logo.png",
+        "sales": 105660000000
+    },
+    {
+        "name": "GE",
+        "url": "www.ge.com",
+        "logoUrl": "http://cdn3.geready.com/sites/all/themes/ge_2012/logo.png",
+        "sales": 143000000000
+    },
+    {
+        "name": "Royal Dutch Shell",
+        "url": "www.shell.com",
+        "logoUrl": "http://www.shell.com/etc/designs/shell/clientlibs/publish/css/img/logos/shell.gif",
+        "sales": 451000000000
+    },
+    {
+        "name": "Bank of America",
+        "url": "www.bankofamerica.com",
+        "logoUrl": "http://www.bankofamerica.com/content/images/ContextualSiteGraphics/Logos/en_US/boa_logo.gif",
+        "sales": 101500000000
+    },
+    {
+        "name": "HSBC",
+        "url": "www.hsbc.com",
+        "logoUrl": "http://www.hsbc.com/hsbcdotcom/images/content/hsbc-logo-footer.png",
+        "sales": 79000000000
+    },
+    {
+        "name": "Samsung",
+        "url": "www.samsung.com/de/home",
+        "logoUrl": "http://www.samsung.com/common/next/img/logo-samsung-2x.png",
+        "sales": 208000000000
+    },
+    {
+        "name": "Total",
+        "url": "www.total.de",
+        "logoUrl": "http://www.total.de/cs/Total_NW/img/common/logos/header-logo-total.png",
+        "sales": 227000000000
+    },
+    {
+        "name": "Vodafone",
+        "url": "www.vodafone.com",
+        "logoUrl": "http://www.vodafone.com/content/dam/group/menu/vf-logo.png",
+        "sales": 65000000000
+    },
+    {
+        "name": "DHL",
+        "url": "www.dhl.de",
+        "logoUrl": "http://www.dhl.de/etc/designs/relaunch/components/logo/brand-logo/img/dhl-logo.gif",
+        "sales": 102000000000
+    }
+];
+});
+
+
+
+
+</script>
+
+
+    </div>
+     
+    </div>
+  </body>
+</html>
