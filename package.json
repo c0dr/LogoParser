@@ -3,6 +3,6 @@
   "description": "This is a nodejs app, which allows you to parse logos from most of the websites on the web.",
   "version": "0.0.1",
   "dependencies": {
-    "jsdom": "*"
+    "jsdom": "3.1.2"
   }
 }
