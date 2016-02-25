@@ -6,7 +6,7 @@ It has a simple http api, which allows you to retrieve the logos very easily.
 
 It was created at the Data Münster Hackathon, which was supported by Intuit, in just a few hours so the code might need some cleanup :)
 
-It works for about 80-90% of the pages of the web. The others need some work, the code is there but JSom behaves a bit strange. In the hackathon it was supposed to be a python script, which does machine learning on all of the images on the page.
+It works for about 80-90% of the pages of the web. The others need some work, the code is there but JSom behaves a bit strange. For the demo we used a different script which goes a step further. Using machine learning we go through all images of the page to see which image is most likely the logo.
 
 ##Use
 `git clone https://github.com/c0dr/LogoParser.git`
